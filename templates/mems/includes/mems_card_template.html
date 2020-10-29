@@ -1,0 +1,16 @@
+{% load static %}
+<div class="card mb-3" style="max-width: 600px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{ MEDIA_URL }}{{ mem.image.url }}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ mem.title }}</h5>
+        <p class="card-text">{{ mem.body|truncatewords:15 }}</p>
+        <p class="card-text"><small class="text">{{ mem.date_pub }}</small></p>
+      </div>
+        <a href="{{ mem.get_absolute_url }}" class="btn btn-dark" >Развернуть</a>
+    </div>
+  </div>
+</div>

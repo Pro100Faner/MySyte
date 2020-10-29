@@ -1,0 +1,12 @@
+{% extends 'mems/base_mems.html' %}
+
+{% block title %}
+    Mems
+{% endblock %}
+
+{% block content %}
+    <h1 class="md-5">Mems:</h1>
+    {% for mem in mems %}
+        {% include 'mems/includes/mems_card_template.html' %}
+    {% endfor %}
+{% endblock %}

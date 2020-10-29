@@ -1,0 +1,15 @@
+{% extends 'mems/base_mems.html' %}
+
+{% block title %}
+    {{ mem.slug }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">
+        {{ mem.title }}
+    </h1>
+    <img src="{{ MEDIA_URL }}{{ mem.image.url }}" class="card-img" alt="...">
+    <p>
+        {{ mem.body }}
+    </p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'news/base_news.html' %}
+
+
+
+{% block title %}
+    Новости
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">
+        Новости:
+    </h1>
+    {% for post in posts %}
+        {% include 'news/includes/post_card_template.html'%}
+
+    {% endfor %}
+{% endblock %}
